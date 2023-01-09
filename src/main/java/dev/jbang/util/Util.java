@@ -635,6 +635,7 @@ public class Util {
 			int responseCode;
 			int redirects = 0;
 			while (true) {
+				Util.infoMsg("Starting download of file..."); // Let user know SOMETHING about attempting connection
 				httpConn = (HttpURLConnection) urlConnection;
 				httpConn.setInstanceFollowRedirects(false);
 				if (timeOut >= 0) {
